@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OS BUILD</title>
+    <style>
+      body {
+        background-color: white;
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        font-family: sans-serif;
+      }
+      .box {
+        border-radius: 5px;
+        border-style: solid;
+        border-radius: 25px;
+        border-color: rgba(0, 0, 0, 0);
+        padding: 25px;
+        text-align: center;
+        background-color: white;
+        color: #00ddff;
+      }
+      .box:hover {
+        background-color: #00ddff;
+        box-shadow: 0 0 15px #00ddff;
+        color: white;
+      }
+      .topbar {
+        color: white;
+      }
+      .topbar:hover {
+        box-shadow: 0 0 15px rgba(145, 145, 145);
+      }
+      .topbar p {
+        padding: 3px;
+        border-radius: 15px;
+      }
+      .topbar p:hover {
+        box-shadow: 0 0 5px white;
+        background-color: white;
+        color: #00ddff;
+      }
+      #timeElement {
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+      }
+      setInterval(updateTime, 1000);
+    </script>
+  </head>
+  <body>
+    <div
+      class="topbar"
+      style="
+        display: flex;
+        justify-content: space-between;
+        border-radius: 25px;
+        background-color: rgb(145, 145, 145);
+      "
+    >
+      <p style="margin-left: 16px"><b>BasicOS</b></p>
+      <p id="timeElement"><b>Time</b></p>
+      <p style="margin-right: 16px"><b>Simple is Better</b></p>
+    </div>
+    <div
+      class="box"
+      style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      "
+    >
+      <h1>Welcome To My OS</h1>
+      <h2>Introductions</h2>
+      <p>I am Viraj Moharle and I am new to coding</p>
+    </div>
+  </body>
+</html>
